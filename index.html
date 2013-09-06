@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+      function assert (assertion, message) {
+        message = message || ""
+        if(!assertion) {
+          console.log("FAIL: " + message);
+        } else {
+          console.log("PASS");
+        }
+      }
+
+      function assertEqual(example, other, message) {
+        assert(example === other, message);
+      }
+
+      function assertMatches (exampe, other, message) {
+        assert(example.match(other), message);
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Intro to Programming</h1>
+          <h3>using JavaScript</h3>
+          <p>
+            <small>Created by <a href="http://aaroncruz.com">aaron cruz</a> / <a href="http://twitter.com/mraaroncruz">@mraaroncruz</a></small>
+          </p>
+        </section>
+
+<section data-markdown>
+
+## Overview of Programming
+Programming is basically
+
+- Types
+- Variables
+- Lists
+- Objects
+- Functions
+- Loops
+- Control Flow
+- Expressions
+
+</section> <section data-markdown>
+
+### Variables
+A variable is a named place where you can store information you can use later
+
+## Example
+Storing numbers for addition
+
+</section> <section data-markdown>
+
+## Demonstration
+
+</section> <section data-markdown>
+
+### Arrays (Lists)
+An ordered list of data that can be accessed by index. Index starts at zero.
+
+## Example
+List of users; Temperatures for the week
+
+    var users = ["Bob", "Lisa", "Aaron"];
+    alert(users[0])
+    // => alerts "Bob"
+
+</section> <section data-markdown>
+
+## Demonstration
+
+</section> <section data-markdown>
+
+### Objects (Hashes, Dictionaries)
+A data structure based on keys and values. Keys must be strings but values can be any of the other Types.
+
+## Example
+Any complex data structure.
+
+- state of game
+- users
+- data returned from external service e.g. Twitter, Weather
+
+    var bob = { firstName: "Bob", lastName: "Smith", phone: "333444343"};
+    alert(bob.firstName);
+    // => alerts 'Bob'
+
+</section> <section data-markdown>
+
+## Demonstration
+
+</section> <section data-markdown>
+
+### Functions
+A piece of code that performs a task
+
+## Example
+Adding two numbers together; Trahsforming a list of data.
+
+    function addTwo (n) {
+      alert(n + 2)
+    }
+    addTwo(4);
+    // => alerts 6
+
+or return a value
+
+    function addTwo (n) {
+      return n + 2;
+    }
+    var newValue = addTwo(4);
+    alert(newValue);
+    // => alerts 6
+
+</section> <section data-markdown>
+
+## Demonstration
+
+</section> <section data-markdown>
+
+### Loops
+A variable is a named place where you can store information you can use later
+
+</section> <section data-markdown>
+
+### for
+takes as arguments
+
+1. Initial value
+2. It will keep looping until this evalutes to false
+3. What to change (increment or decrement the counter)
+
+</section> <section data-markdown>
+
+### Example
+
+    for (var i = 0; i < 10; i += 1) {
+      alert(i);
+    }
+
+</section> <section data-markdown>
+
+### while
+
+</section> <section data-markdown>
+
+### Example
+Storing numbers for addition
+
+</section> <section data-markdown>
+
+## Demonstration
+
+</section> <section data-markdown>
+
+### Control Flow
+Your code making decisions
+
+</section> <section data-markdown>
+
+### if/else
+If this is true, then do something, otherwise do something else
+
+## Example
+Act on received data, only if you really received data
+
+    var n = 4;
+    if (n === 3) {
+      alert("there is a problem here");
+    } else {
+      alert("At least it doesn't equal 3"
+    }
+</section> <section data-markdown>
+
+## Demonstration
+
+</section> <section data-markdown>
+
+## Hello World example
+
+    // save the "Hello World!" string in a variable named 'hello'
+    var hello = "Hello World!";
+
+    // built in JavaScript 'alert' pops up dialog in browser with it's argument
+    alert(hello);
+
+</section> <section data-markdown>
+
+## JavaScript Documentation
+### Mozilla (Firefox) Javascript Developer Docs
+https://developer.mozilla.org/en/docs/JavaScript
+### Or in Spanish!
+https://developer.mozilla.org/__es__/docs/JavaScript
+</section>
+        <section>
+          <h1>THE END</h1>
+          <h3>By <a href="http://aaroncruz.com">aaron cruz</a> / <a href="http://twitter.com/mraaroncruz">@mraaroncruz</a></h3>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
